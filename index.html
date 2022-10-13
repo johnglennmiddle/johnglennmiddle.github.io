@@ -193,19 +193,6 @@ p {
   </main>
 </body>
 <script>
-function unlocksetup() {
-  var x = document.getElementById("main-holder");
-  x.style.display = "none";
-  var x = document.getElementById("mains");
-  x.style.display = "block";
-}
-function hidefailpin() {
-  var x = document.getElementById("wrongpin");
-  x.style.display = "none";
-}
-function nopin() {
-  pin = false;
-}
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 
@@ -257,7 +244,6 @@ window.setInterval(function() {
 .menubar {
   position: fixed;
   left: 8px; right: 8px; top: 8px;
-  height: 40px;
   border-radius: 8px;
   color: #fff;
   z-index: 2;
@@ -299,7 +285,6 @@ window.setInterval(function() {
   position: flex;
   left: 0px;
   right: 0px;
-  height: 250px;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 4px;
