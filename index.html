@@ -1,0 +1,346 @@
+<script src = "scripts/lightdark.js"> </script>
+<script src = "scripts/wallpaper.js"> </script>
+<title>JGMS News</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+body {
+  font-family: 'Hind Siliguri', sans-serif;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-image: url('images/wr1.svg');
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+.app {
+  background-color: #1a1a1a;
+  border: none;
+  color: #fff;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: .1s;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+.settings {
+  width: 100% !important;
+  padding: 4px !important;
+  margin: 1px !important;
+  border-radius: 8px !important;
+}
+.settingsthicc {
+  width: 100% !important;
+  padding: 8px !important;
+  margin: 1px !important;
+  border-radius: 8px !important;
+}
+.metrobutton {
+  padding: 16px 20px;
+  font-size: 18px;
+}
+.app:hover {
+  opacity: 65%;
+}
+.app:active {
+  opacity: 25%;
+}
+.button1 {background-color: #1d1d1d !important;}
+.button2 {background-color: #da532c !important;}
+.button3 {background-color: #1e7145 !important;}
+.color1 {background-color: #1d1d1d !important;}
+.color2 {background-color: #990000 !important;}
+.color3 {background-color: #d6d600 !important;}
+.color4 {background-color: rgb(255, 196, 0) !important;}
+.color5 {background-color: #00ff00 !important;}
+.color6 {background-color: #008000 !important;}
+.color7 {background-color: #0099cc !important;}
+.color8 {background-color: #0000cc !important;}
+.color13 {background-color: #000088 !important;}
+.color14 {background-color: #880088 !important;}
+.color9 {background-color: #cc00cc !important;}
+.color10 {background-color: #ff00ff !important;}
+.color11 {background-color: #ff0000 !important;}
+.color12 {background-color: #ff5500 !important;}
+.color17 {background-color: #000000 !important;}
+.color16 {background-color: #b3b3b3 !important;}
+.color15 {background-color: #f2f2f2 !important;}
+::-webkit-scrollbar {
+  display: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+.lightdarkb {
+  transition: .55s;
+  background:rgb(0,0,0,.50);
+  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
+}
+.lightdark {
+  transition: .55s;
+  background-color: #1a1a1a;
+}
+.lightdark:hover {
+}
+.lightdark:active {
+  transition: none;
+}
+#wrongpin {
+  position: fixed;
+  left: 8px; right: 8px;
+  bottom: 8px; top: 8px;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  z-index: 4;
+  font-size: 20px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color:rgb(180, 50, 50, .75);
+  display: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+#error-msg-second-line {
+  display: block;
+}
+#login-form {
+  position: fixed;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: 'Hind Siliguri', sans-serif;
+  max-width: 70%;
+  max-height: 50%;
+  width: 300px;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 10px;
+}
+.login-form-field::placeholder {
+  color: #4a4a4a;
+}
+.login-form-field {
+  border: none;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  outline: none;
+  padding: 8px;
+  font-size: 20px;
+  border: none;
+  text-align: center;
+  color: #fff;
+  font-family: 'Hind Siliguri', sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+}
+#login-form-submit {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  font-size: 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Hind Siliguri', sans-serif;
+  background-color: #2a2a2a;
+  cursor: pointer;
+  outline: none;
+}
+#main-holder {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+#setupunlock {
+  position: fixed;
+  font-family: 'Hind Siliguri', sans-serif;
+  max-width: 70%;
+  max-height: 50%;
+  width: 300px;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;,
+  text-align: center;
+  border-radius: 10px;
+}
+</style>
+<main id="main-holder">
+    <div id="wrongpin">
+      <p>Wrong password.</p>
+      <p>To get the password, go to the JGM gc on Snap or text Julian Dadovich. Note that you may need verification to verify that you are not someone trying to do bad things.</p>
+      <button class="app" onclick="hidefailpin();">Try Again</button><button class="app" onclick="window.location.reload();">Open Snap</button>
+    </div>
+<form id="login-form" class="lightdarkb">
+      <input type="password" name="password" id="password-field" class="login-form-field lightdark" placeholder="Password">
+      <input type="submit" value="Log In" id="login-form-submit" class="app lightdark">
+      <p id="timeleft"></p>
+    </form>
+  </main>
+</body>
+<script>
+function unlocksetup() {
+  var x = document.getElementById("main-holder");
+  x.style.display = "none";
+  var x = document.getElementById("mains");
+  x.style.display = "block";
+}
+function hidefailpin() {
+  var x = document.getElementById("wrongpin");
+  x.style.display = "none";
+}
+function nopin() {
+  pin = false;
+}
+const loginForm = document.getElementById("login-form");
+const loginButton = document.getElementById("login-form-submit");
+
+loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const password = loginForm.password.value;
+
+    if (password === "jgmsucks") {
+      var x = document.getElementById("main-holder");
+      x.style.display = "none";
+      var x = document.getElementById("mains");
+      x.style.display = "block";
+    } else {
+      var x = document.getElementById("wrongpin");
+      x.style.display = "block";
+    }
+})
+function reload() {
+  document.getElementById('incidents').src = "pages/incidents.html";
+  document.getElementById('footage').src = "pages/footage.html";
+}
+window.setInterval(function() {
+  reload()
+}, 120000);
+</script>
+<style>
+.wallicon {
+  border-radius: 8px;
+  width: 200px;
+  height: 110px;
+  background:rgb(0,0,0,0);
+  transition: 0.2s;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3px;
+  object-fit: cover;
+  background-color:  #111;
+}
+.margin4px {margin-right: 4px;}
+.marginleft5px {margin-left: 5px;}
+.marginleft3px {margin-left: 3px;}
+.wallicon:hover {
+  opacity: 60%;
+}
+.wallicon:active {
+  opacity: 35%;
+}
+.menubar {
+  position: fixed;
+  left: 8px; right: 8px; top: 8px;
+  height: 40px;
+  border-radius: 8px;
+  color: #fff;
+  z-index: 2;
+}
+.h2 {
+  font-size: 22px;
+}
+#mains {
+  display: none;
+}
+.buttonmenu {
+  padding: 10px;
+  padding-top: 7px;
+  font-size: 17px;
+  background: transparent !important;
+  color: #fff;
+  padding-right: 2px;
+  transition: .3s;
+  border: none;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+.buttonmenu:hover {
+  color: #888;
+}
+.buttonmenu:active {
+  color: #555;
+}
+.logout {
+  color: #f00;
+}
+.scrolldiv {
+  position: fixed;
+  overflow-y: scroll;
+  left: 8px; right: 8px;
+  bottom: 0px; top: 0px;
+  z-index: 1;
+}
+.apps {
+  position: flex;
+  left: 0px;
+  right: 0px;
+  height: 250px;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 4px;
+  color: #fff;
+  text-align: center;
+  overflow: scroll;
+}
+.firstapp {
+  margin-top: 52px;
+}
+.lastapp {
+  margin-bottom: 8px;
+}
+.frame {
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+</style>
+<div id="mains">
+  <div class="menubar lightdarkb">
+    <button class="buttonmenu logout" onclick="window.location.reload();">LOG OUT</button>
+    <button class="buttonmenu" onclick="reload();">Refresh For New Info</button>
+  </div>
+  <div class="scrolldiv">
+    <div class="apps lightdarkb firstapp">
+      <p>Settings</p>
+      <button class="app" onclick="lightmode();">Light Appearence</button>
+      <button class="app" onclick="darkmode();">Dark Appearence</button>
+      <p style="margin-top: 4px;"><img src="images/wr1.svg" onclick="wr1();" class="wallicon"></img>
+      <img onclick="wr2();" src="images/wr2.jpg" loading="lazy" class="wallicon"></img>
+      <img onclick="wr3();" src="images/wr3.jpg" loading="eager" class="wallicon"></img>
+      <img onclick="wr4();" src="images/wr4.jpg" loading="lazy" class="wallicon"></img>
+      <img onclick="wr5();" src="images/wr5.jpg" loading="lazy" class="wallicon"></img></p>
+    </div>
+    <div class="apps lightdarkb">
+      <iframe id="incidents" src="pages/incidents.html" class="frame"></iframe>
+    </div>
+    <div class="apps lightdarkb lastapp">
+      <iframe id="footage" src="pages/footage.html" class="frame"></iframe>
+    </div>
+</div></div>
